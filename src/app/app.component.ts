@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'spotifyCode';
 
-  trackUrl: any;
+  trackUrl: any = "spotify:track:2ap1x3VLFXzeVRDl14PYsM";
   images: Array<string> = [];
 
   onSubmit(): void {

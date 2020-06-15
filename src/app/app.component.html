@@ -1,11 +1,16 @@
 <div>
   <form>
     <input type="text" [(ngModel)]="trackUrl" name="trackurl">
-    {{ trackUrl }}
     <button type="button" (click)="onSubmit()">Get image</button>
  </form>
 
- <div>
-   <img *ngFor="let image of images" src="{{ image }}" alt="Spotify code url">
+ <div id="print-section" style="width: 205mm;">
+   <img *ngFor="let image of images" src="{{ image }}" alt="Spotify code url" style="width: 100mm;">
  </div>
+
+ <!--
+   2)- Add the directive name in your button (ngxPrint),
+   3)- Affect your ID to printSectionId
+ -->
+<button printSectionId="print-section" ngxPrint>print</button> 
 </div>
